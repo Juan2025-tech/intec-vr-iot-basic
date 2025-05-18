@@ -99,8 +99,8 @@ console.log("Componente blynk-updater detenido y intervalo limpiado.");
 </head>
 <body>
 <!-- Aquí irá nuestra escena A-Frame -->
-    <a-scene blynk-updater="apiKey: QRzr6b5hOpnoPZS16ZODp3_Qr_5alGvC; pin: V0; interval: 3000">
-    
+     <a-scene blynk-updater="apiKey: QRzr6b5hOpnoPZS16ZODp3_Qr_5alGvC; pin: V0; interval: 3000" vr-mode-ui="enabled: true">
+  
 <a-sky color="#ECECEC"></a-sky>
 
 <!-- 4. Añadir un suelo -->
@@ -116,13 +116,23 @@ shadow>
 <!-- 5. Añadir la cámara con controles -->
 <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
 
+
+<!-- Nuevo texto encima del de temperatura -->
+<a-text
+value="Intec labs"
+position="-1 2.3 -3"
+align="center"
+color="#000000"
+width="4">
+</a-text>
+
 <!-- 6. Añadir texto 3D para la temperatura -->
 <a-text
 id="temperatureText"
 value="Temperatura: Cargando..."
 position="-1 2 -3"
 align="center"
-color="#FFFFFF"
+color="#000000"
 width="4">
 </a-text>
 
