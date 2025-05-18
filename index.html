@@ -73,7 +73,7 @@ fetchTemperature: function () {
         this.temperatureTextEl.setAttribute('value', 'Error en dato');
         return;
       }
-      this.temperatureTextEl.setAttribute('value', `Temperatura: ${temperature.toFixed(1)} C`);
+      this.temperatureTextEl.setAttribute('value', `Temperatura AKIMA: ${temperature.toFixed(1)} C`);
 
 
       if (temperature < 25) {
@@ -136,14 +136,25 @@ color="#000000"
 width="4">
 </a-text>
 
-<!-- 7. Añadir un cubo cuyo color cambiará -->
-<a-box
-id="temperatureCube"
-position="1 1.5 -3"
-rotation="0 45 0"
-color="#4CC3D9"
-shadow="cast: true">
-</a-box>
+
+<a-scene ...>
+  <a-assets>
+    <img id="img1" src="image.png">
+  </a-assets>
+
+  <a-plane
+    id="temperatureCube"
+    src="#img1"
+    position="1 1.5 -3"
+    width="1.5"
+    height="1.5"
+    rotation="0 0 0"
+    side="double">
+  </a-plane>
+
+  ...
+</a-scene>
+
 
 <!-- 8. Añadir iluminación -->
 <a-light type="ambient" color="#888"></a-light>
