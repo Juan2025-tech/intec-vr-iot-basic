@@ -75,14 +75,8 @@ fetchTemperature: function () {
       }
       this.temperatureTextEl.setAttribute('value', `Temperatura AKIMA: ${temperature.toFixed(1)} C`);
 
+      // No cambies color si estás usando una imagen
 
-      if (temperature < 25) {
-        this.temperatureCubeEl.setAttribute('color', 'blue');
-      } else if (temperature < 30) {
-        this.temperatureCubeEl.setAttribute('color', 'green');
-      } else {
-        this.temperatureCubeEl.setAttribute('color', 'red');
-      }
     })
     .catch(error => {
       console.error('Error al conectar con Blynk o procesar datos:', error);
